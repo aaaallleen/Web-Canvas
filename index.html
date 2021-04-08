@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "keywords" content ="software experiment, HW1">
+        <meta name="author" content = "Allen Lu">
+        <title>HW1 108062135 呂佳恩 </title>
+
+        <link rel ="stylesheet" type="text/css" href="index.css">
+        
+        
+    </head>
+    <body>
+        <div class='field'>
+            <canvas id="canvas">This browser does not support canvas!</canvas>
+            <div class="tools">
+                
+
+                <div class="color-common" title = 'Red' onclick="colorChange('#ff0000')" style ='background: red'></div>
+                <div class="color-common" title = 'Light Green' onclick="colorChange('#90ee90')"  style ='background: lightgreen'></div>
+                <div class="color-common" title = 'Light Sky Blue' onclick="colorChange('#87cefa')" style ='background: lightskyblue'></div>
+                <div class="color-common" title = 'Yellow' onclick="colorChange('#ffff00')" style ='background: yellow'></div>
+                <div class="color-common" title = 'Black' onclick="colorChange('#000000')" style ='background: black'></div>
+                <div class="color-common" title = 'White' onclick="colorChange('#ffffff')" style ='background: white'></div>
+                <br>
+                <br>
+                <input type='text'  onInput='pencolor= this.value'  id = 'hex' maxlength="7" size='7' >
+                <input type='color' onInput='pencolor= this.value'  id='color-picker' >
+                <input type='range' onInput= 'penwidth= this.value' min='1' max='100' id='pen-range'>
+                <input type='number' onInput='penwidth =this.value' id='pensize' maxlength="4" size='4' min='1' max='100'>
+                <input type='file' id='file-uploader' accept=".png, .jpg, .jpeg" onchange="loadFile(event)" /hidden>
+                <button type ='button' class='btn default' title='Pen' onclick='predraw()'><img src="./img/Pen.png"></button> 
+                <br><br>
+                
+                <button type ='button' class='btn default' title='Rectangle' onclick ='rectangle()'><img src="./img/square.png"></button>
+                <button type ='button' class='btn default' title='Circle' onclick='circle()'><img src="./img/circle.png"></button>
+                <button type ='button' class='btn default' title='Triangle' onclick='tri()'><img src="./img/triangle.png"></button>
+                <button type ='button' class='btn default' title='Add Text' onclick='text()'><img src='./img/text.png'></button>
+                <select name="Font" id="Font">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Brush Script MT ">Brush Script MT </option>
+                    <option value="Alfa Slab One">Alfa Slab One</option>
+                    <option value="標楷體">標楷體</option>
+                    <option value="新細明體">新細明體</option>
+
+                    
+                  </select>
+                <br><br>
+
+                <button type ='button' class='btn default' title='Undo' onclick='ensureSave()' ><img src='./img/Undo.png'></button>
+                <button type ='button' class='btn default' title='Redo' onclick='redo_canvas()' ><img src='./img/redo.png'></button>
+                <button type ='button' class='btn default' title='Clear' onclick='clear_canvas()'><img src='./img/clear.png'></button>
+                <button type ='button' class='btn default' title='Erase' onclick='eraser()'><img src="./img/erase.png" ></button>
+                <br><br>
+                <img src="" alt="">
+                
+                <button type ='button' class='btn default' title='Grayscale' onclick='grayscale()'><img src="./img/grayscale.png"></button>
+                <button type ='button' class='btn default' title='Invert colors' onclick='invert()'><img src="./img/invert.png"></button>
+                <button type ='button' class='btn default' title='Upload' id='upload_butt'><img src="./img/upload.png" ></button>
+                <button type ='button' class='btn default' title='Save' onclick = 'download()'><img src="./img/save.png" ></button> 
+                
+
+            </div>
+
+        </div>
+        
+        
+    
+        
+
+        
+        <script src="index.js"></script>
+    </body>
+</html>
