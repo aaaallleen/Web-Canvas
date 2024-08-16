@@ -1,6 +1,6 @@
-# Sofware studio Assignment 1 Canvas README
-108062135 呂佳恩
-
+# Canvas
+呂佳恩
+Demo Site: [Demo](https://108062135.gitlab.io/AS_01_WebCanvas/)
 ## Basic Layout
 ![](https://i.imgur.com/gcGR1xO.png)
 This is the basic layout of my web canvas
